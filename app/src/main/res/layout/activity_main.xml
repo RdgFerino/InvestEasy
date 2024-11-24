@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/Primary"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_título1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="InvestEasy"
+        android:textStyle="italic|bold"
+        android:textColor="@color/gold"
+        android:textSize="42sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="157dp" />
+
+    <TextView
+        android:id="@+id/tv_valrec1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:text="O valor recebido no final do investimento será de:"
+        app:layout_constraintTop_toBottomOf="@+id/tv_título1"
+        tools:layout_editor_absoluteX="175dp" />
+
+    <TextView
+        android:id="@+id/tv_valrec2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valrec1"
+        tools:layout_editor_absoluteX="177dp"
+        tools:text="0.0"/>
+
+    <TextView
+        android:id="@+id/tv_valrend1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:text="Valor dos rendimentos:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valrec2"
+        tools:layout_editor_absoluteX="175dp" />
+
+    <TextView
+        android:id="@+id/tv_valrend2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valrend1"
+        tools:layout_editor_absoluteX="175dp"
+        tools:text="0.0"/>
+
+    <TextView
+        android:id="@+id/tv_aporte_men1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aporte por Mês:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valrend2" />
+
+    <TextView
+        android:id="@+id/tv_Qtd_men1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade de Mêses:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aporte_men1" />
+
+    <TextView
+        android:id="@+id/tv_juros1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juros %:"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Qtd_men1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aporte_men1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_inserir_val"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="Inserir Valor $"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Qtd_men1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_Qtd_men1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserir número de mêses"
+            android:maxLength="3"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_juros1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_juros1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserir juros"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_limpar1"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_btn_limpar1"
+        android:text="Limpar"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_calcular1"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_btn_calcular1"
+        android:text="Calcular"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/btn_limpar1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
