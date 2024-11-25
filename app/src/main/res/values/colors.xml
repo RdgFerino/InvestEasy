@@ -2,6 +2,6 @@
 <resources>
     <color name="Primary">#0f5e5d</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="hint_text">#e038cf</color>
+    <color name="hint_text">#040405</color>
     <color name="gold">#acf215</color>
 </resources>
